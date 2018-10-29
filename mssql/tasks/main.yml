@@ -1,0 +1,10 @@
+---
+
+- include_tasks: installDB.yml
+- include_tasks: createDatabase.yml
+- include_tasks: copyTemplate.yml
+
+- include_tasks: users.yml
+
+
+

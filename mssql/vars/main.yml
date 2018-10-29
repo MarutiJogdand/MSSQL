@@ -1,0 +1,23 @@
+---
+# Repo links for mssql
+mssql_server_repo:  "https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo -o /etc/yum.repos.d/mssql-server-2017.repo" 
+mssql_prod_repo:  "https://packages.microsoft.com/config/rhel/7/prod.repo -o /etc/yum.repos.d/msprod.repo"
+
+# Remove old ODBC Packages
+unixODBC: ['unixODBC-utf16', 'unixODBC-utf16-devel']
+
+# All Required mssql server packages
+mssql_server_packages: ['unixODBC-devel','mssql-server','python-pip','python-devel']
+
+# Database Server Configuratin
+server_type: 'Developer'
+db_pass: 'Canopy1!'
+
+#Database name
+database_name: 'ComposeDB'
+
+# privilege variable
+privilege: ALL
+
+newPassword: ''
+action: 'create'
